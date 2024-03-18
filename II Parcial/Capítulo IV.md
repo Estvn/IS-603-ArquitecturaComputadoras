@@ -11,7 +11,7 @@ ________________________________________________________________________________
 # INSTRUCCIONES DE CARGAa
 Las instrucciones de carga son las que transfieren información a los registros. Esta información puede estar en la propia instrucción o en memoria.
 
-## Carga de Datos Constantes
+## Carga de Datos ConstantesEsa instrucción es posible, porque estás usando ldr que carga palabras, y el #offset5 que estás poniendo ahí está en el rango de 0 a 124, para ldrh es 0 - 62 y para ldrb es 0 -31
 ### Información importante sobre la seudointrucción lrd
 - La instrucción <<mov>> permite cargar un dato inmediato de tamaño byte en el registro <<mov rd, #Inm8>>
 Cuando se desean cargar registros que ocupen más de un byte, la instrucción de carga <<mov>> no se puede utilizar.

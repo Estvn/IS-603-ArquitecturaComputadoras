@@ -76,7 +76,7 @@ Los parámetros intercambiados entre el programa innvocador y la subrutina puede
 ## Convenios Para Paso de Parámetros a las Subrutinas
 - Para poder utilizar subrutinas utilizando únicamente su interfaz, pudiendo de esta forma emplear funciones de bibliotecas, es necesario establecer un convenio acerca de como pasar y devolver los parámetros para que cualquier programa pueda utilizar cualquier subrutina, aunque estén programados de forma independiente.
 
-* En este capítulo solo se usará el paso de parámetros por medio de registros, y en este caso, la arquitectura ARM adopta como convenio el paso de parámetros mediante los registros r0, r1, r2 y r3, ya sea para parámetros de entrada, salida o entrada/salida. 
+* En este capítulo solo se usará el paso de parámetros por medio de registros, y en este caso, la arquitectura ARM adopta como convenio el paso de parámetros mediante los registros r0, r1, r2 y r3, ya sea para parámetros de entrada, salida o entrada/salida.
 - Para los casos en los que se tengan que pasar más de 4 parámetros, el convenio define cómo pasar el resto de parámetros mediante la pila, tal y como se verá en el siguiente capítulo.
 
 * El último aspecto a tener en cuenta con el paso de parámetros es como se transfiere cada uno de los parámetros. 
@@ -120,7 +120,7 @@ ________________________________________________________________________________
 
 1. **Parámetro de entrada**. Un parámetro de este tipo es utilizado por la subrutina pero no debería ser modificado, por lo que **es preferible pasar este tipo de parámetros por valor**.
 
-2. **Parámetro de salida**. Un parámetro de este tipo permite a la subrutina devolver el resultado de las operaciones realizadas. Para este tipo de parámetros se puede optar por cualquiera de las opciones: **El parámetro puede devolverse por parámetro o por referencia**.
+2. **Parámetro de salida**. Un parámetro de este tipo permite a la subrutina devolver el resultado de las operaciones realizadas. Para este tipo de parámetros se puede optar por cualquiera de las opciones: **El parámetro puede devolverse por valor o por referencia**.
 - Si el parámetro de salida se pasa por valor, la subrutina devuelve el dato utilizando el registro reservado para ello.
 - Si el parámetro de salida se pasa por referencia, la subrutina almacenará en memoria el dato, pero para ello el programa invocador deberá haberle pasado previamente en qué dirección de memoria deberá almacenarlo.
 
